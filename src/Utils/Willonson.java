@@ -36,7 +36,7 @@ public class Willonson {
         return revised_approval;
     }
 
-    // 根据置信水平计算z值
+
     public double calculateZ() {
         double z = new Z_value().calculate();   // if confidence level is not reasonable, use the default value of 0.7
         if (confidenceLevel<1 && confidenceLevel >0 ){

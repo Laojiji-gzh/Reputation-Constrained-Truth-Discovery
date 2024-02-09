@@ -246,8 +246,6 @@ public class RCTD {
 
 
 
-
-            // 多轮的结果求均值
             for (Integer taskId : RCTD.taskMap.keySet()) {
                 int aggregateLabel = RCTD.taskMap.get(taskId).getAggregateLabel();
 
