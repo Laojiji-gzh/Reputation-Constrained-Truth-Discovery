@@ -12,7 +12,7 @@ public class Run {
          * p:0.8-1
          * step:1,2,3,4,5
          *
-         * dataset(4): DOG, NLP, WS, SP
+         * dataset(4): DOG, PosSent, WS, SP
          */
 
         // use IDE
@@ -41,7 +41,7 @@ public class Run {
 //        for (String data : dataset) {
 //        int[] step = new int[]{1,2,3,4};
 //        double[] p = new double[]{0.7,0.75,0.8,0.85};
-//        String[] dataset = new String[]{"DOG","NLP","SP","WS"};
+//        String[] dataset = new String[]{"DOG","PosSent","SP","WS"};
 //            for (int sp : step) {
 //                for (double pp : p) {
 //                    RDTD.start(0.4,0.1,1,0.25,pp,sp,10,data);
