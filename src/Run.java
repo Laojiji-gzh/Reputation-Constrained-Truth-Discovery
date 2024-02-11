@@ -12,12 +12,12 @@ public class Run {
          * p:0.8-1
          * step:1,2,3,4,5
          *
-         * dataset(4): DOG, NLP, Weather Sentiment, Sentiment Popularity
+         * dataset(4): DOG, NLP, WS, SP
          */
 
         // use IDE
         if (args.length==0){
-            RCTD.start(0,0.1,1,0.25,0.9,2,10,10,"DOG", 1.5, 0.15, true);
+            RCTD.start(0,0.1,1,0.25,0.9,2,10,10,"WS", 1.5, 0.15, true);
         }
         // use commond-line
         else if (args.length == 12){
@@ -41,7 +41,7 @@ public class Run {
 //        for (String data : dataset) {
 //        int[] step = new int[]{1,2,3,4};
 //        double[] p = new double[]{0.7,0.75,0.8,0.85};
-//        String[] dataset = new String[]{"DOG","NLP","Sentiment Popularity","Weather Sentiment"};
+//        String[] dataset = new String[]{"DOG","NLP","SP","WS"};
 //            for (int sp : step) {
 //                for (double pp : p) {
 //                    RDTD.start(0.4,0.1,1,0.25,pp,sp,10,data);
@@ -59,7 +59,7 @@ public class Run {
 
 //        CRH.start(0,0.1,1,0.2,100,30000,"DOG", true);
 //        System.out.println("CRH just run one iteration!!!");
-//        String name = "Weather Sentiment";
+//        String name = "WS";
 //        double acc = 0.25;
 //
 //        System.out.println("-----------------------" + name + "! mu:0-0.6--------------------------------");
@@ -106,7 +106,7 @@ public class Run {
 
         /**
          * CATD algorithm, resolve the long tail phenomenon of crowdsourcing
-         * Reference: "A Confidence-Aware Approach for Truth Discovery on Long-Tail Data", Sentiment Popularity
+         * Reference: "A Confidence-Aware Approach for Truth Discovery on Long-Tail Data", SP
          */
 //        CATD.start(0,0.1,1,0.2,50,50,"Toloka5",false);
 
