@@ -218,6 +218,8 @@ public class RCTD {
         Map<Integer, ArrayList<Integer>> iteration_label = new HashMap<>();
 
         Output output = null;
+        System.out.println("Time Cost is not Include the Initialization");
+
 
         for (int iter = 0; iter < iteration; iter++) {
 
@@ -257,6 +259,8 @@ public class RCTD {
                     iteration_label.get(taskId).add(aggregateLabel);
                 }
             }
+
+            // A test, not associated with RCTD!!!
             if (iter == iteration-1){
                 for (Integer taskId : iteration_label.keySet()) {
                     List<Integer> labels = iteration_label.get(taskId);
@@ -284,7 +288,7 @@ public class RCTD {
                     }
                 }
 
-                System.out.println("NEW METHOD:" + ac/total);
+//                System.out.println("NEW METHOD:" + ac/total);
             }
 
 
@@ -293,7 +297,7 @@ public class RCTD {
 
 
         System.out.println();
-        System.out.println("Dataset: " + dataset + "\n" + "Sybil-Parameter: " + "mu=" + mu + ", epsilon=" + epsilon + ", lambda=" + lambda + ", sybil_accuracy=" + sybil_accuracy + "\n" + "Penalty Parameter: " + "step=" + step + ", p="+ p + "\n" + "Approval Rate Simulation: "+ "Δk = " + String.format("%.2f",output.k) + ", Δm = " + String.format("%.2f",output.m));
+        System.out.println("Dataset: " + dataset + "\n" + "Sybil-Parameter: " + "mu=" + mu + ", epsilon=" + epsilon + ", lambda=" + lambda + ", sybil_accuracy=" + sybil_accuracy + "\n" + "Penalty Parameter: " + "step=" + step + ", p="+ p + "\n" + "Approval Rate Simulation: "+ " k = " + String.format("%.2f",output.k) + ", m = " + String.format("%.2f",output.m));
         System.out.println("Average Accuracy: " + String.format("%.3f", total_acc / iteration * 100) + "%");
         System.out.println("Max Accuracy: " + String.format("%.3f", max_acc * 100) + "%");
         System.out.println("Min Accuracy: " + String.format("%.3f", min_acc * 100) + "%");

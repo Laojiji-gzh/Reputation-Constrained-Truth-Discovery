@@ -1,6 +1,6 @@
 # RCTD: Reputation-Constrained Truth Discovery in Sybil Attack Crowdsourcing Environment
 
-Your code can run either in an integrated development environment (IDE) or via command-line execution.
+The code can run either in an integrated development environment (IDE) or via command-line execution.
 
 
 

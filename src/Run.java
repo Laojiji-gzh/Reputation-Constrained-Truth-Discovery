@@ -2,7 +2,6 @@ public class Run {
 
     public static void main(String[] args) {
 
-
         /**
          * Our Algorithm RDTD, "Reputation-Driven Truth  Discovery"
          *
@@ -16,11 +15,27 @@ public class Run {
          * dataset(4): DOG, NLP, Weather Sentiment, Sentiment Popularity
          */
 
+        // use IDE
+        if (args.length==0){
+            RCTD.start(0,0.1,1,0.25,0.9,2,10,10,"DOG", 1.5, 0.15, true);
+        }
+        // use commond-line
+        else if (args.length == 12){
+            String dataset = args[0];
+            double mu = Double.parseDouble(args[1]);
+            double epsilon = Double.parseDouble(args[2]);
+            int lambda = Integer.parseInt(args[3]);
+            double sybil_accuracy = Double.parseDouble(args[4]);
+            double p = Double.parseDouble(args[5]);
+            int step = Integer.parseInt(args[6]);
+            int iteration = Integer.parseInt(args[7]);
+            int batch = Integer.parseInt(args[8]);
+            double k = Double.parseDouble(args[9]);
+            double m = Double.parseDouble(args[10]);
+            boolean use_wilson = Boolean.parseBoolean(args[11]);
 
-
-        RCTD.start(0,0.1,1,0.25,0.9,2,10,10,"DOG", 1.5, 0.15, true);
-
-
+            RCTD.start(mu,epsilon,lambda,sybil_accuracy,p,step,iteration,batch,dataset, k, m, use_wilson);
+        }
 
 
 //        for (String data : dataset) {
@@ -43,8 +58,6 @@ public class Run {
 
 
 //        CRH.start(0,0.1,1,0.2,100,30000,"DOG", true);
-
-
 //        System.out.println("CRH just run one iteration!!!");
 //        String name = "Weather Sentiment";
 //        double acc = 0.25;
